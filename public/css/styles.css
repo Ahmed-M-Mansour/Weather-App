@@ -1,4 +1,5 @@
 body {
+
     color: #333333;
     font-family: arial;
     max-width: 650px;
@@ -51,4 +52,12 @@ button{
     background-color: #888888; 
     color: white; 
     border: 1px solid #888888;
+}
+a{
+    text-decoration: none;
+    opacity: .7;
+    transition: .1s ease-in
+}
+a:hover{
+    opacity: 1 ;
 }
