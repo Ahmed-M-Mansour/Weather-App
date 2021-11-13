@@ -6,6 +6,7 @@ const geoCode = require('./utils/geocode') ;
 const { send } = require('process');
 // ceate a server 
 const app = express(); 
+const port = process.env.PORT || 3000 ; 
 // Define paths for express config 
 const publicDirectoryPath = path.join(__dirname , '../public') ; 
 const viewsPath = path.join(__dirname , '../templates/views') ; 
@@ -107,22 +108,11 @@ app.get('*' , (req , res ) =>{
 
 
 
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
+app.listen(port, ()=>{
+    console.log('Server is up on port' + port )
 })
 
 
 
 
-// app.get('' , (req , res )=>{
-//     res.send('Finally run Express App! ')
-// })
-// serve help page 
-// app.get('/help' , (req , res)=>{
-//     app.use(express.static(`${publicDirectoryPath}/help.html`))
-// })
-// // serve about page 
-// app.get('/about' , (req , res )=>{
-//     res.send('<h1> About Page </h1>')
-// })
 
